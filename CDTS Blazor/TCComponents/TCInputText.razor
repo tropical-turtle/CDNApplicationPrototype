@@ -7,8 +7,23 @@
     }
     <input type="@this.TextInputTypeString()"
            class="form-control @CssClass.Replace("invalid", "is-invalid")" 
-           id="@Id" @bind="@CurrentValue" />
+           id="@Id" @bind="@CurrentValue"  @oninput=@ValueEntered/>
     <div class="invalid-feedback">
         <ValidationMessage For="@ValidationFor" />
     </div>
 </div>
+
+@code
+{
+    /// <summary>
+    /// This is created to test TCInputText component.
+    /// </summary>
+    /// <param name="e"> e is the value entered into the text box..</param>
+    public void ValueEntered(ChangeEventArgs e)
+    {
+        if (e != null)
+        {
+            this.CurrentValue = e.Value.ToString();
+        }
+    }
+}

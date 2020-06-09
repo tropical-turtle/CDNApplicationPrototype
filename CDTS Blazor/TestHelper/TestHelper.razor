@@ -1,0 +1,38 @@
+﻿@using CDNApplication.TCComponents
+
+<h3>TestHelper</h3>
+
+<EditForm Model="info" OnSubmit="FormSubmitted">
+
+    <TCInputText Label="Nationality"
+                 Id="CDN-Nationalty"
+                 @bind-Value="info.Item1"
+                 ValidationFor="@(() => info.Item2)"
+                 />
+
+
+</EditForm>
+
+@code 
+{
+    //private TombstoneInformation tombstoneInformation = new TombstoneInformation();
+
+    SomeInfo info=new SomeInfo();
+
+    public void FormSubmitted()
+    {
+
+    }
+
+    public class SomeInfo
+    {
+        public string Item1 { get; set; }
+        public string Item2 { get; set; }
+        public string Item3 { get; set; }
+        public string Item4 { get; set; }
+        public string Item5 { get; set; }
+
+
+    }
+
+}
