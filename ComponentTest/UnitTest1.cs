@@ -4,7 +4,7 @@ using CDNApplication.TestHelper;
 using System;
 using Xunit;
 using CDNApplication.Pages;
-//TombstoneInformation
+
 // to test TCInputText, we had to place it inside <EditForm> tag, EditForm also requires a model.
 //so, I had to build a temporary
 //Component called "TestHelp" inside CDN application project .
